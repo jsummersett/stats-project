@@ -1,0 +1,109 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+<!-- Replace below with the title of your project -->
+PROJECT TITLE
+========================================================
+
+
+<!-- Replace below with your team name and the last and first name of each team member -->
+### JoJo Summersett, Klaire Pham, Jason Phillip
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+```{r}
+## load all necessary packages
+library(tidyverse)
+library(openintro)
+```
+
+
+
+Research question: 
+--------------------------------------------------------
+<!-- In one sentence, what is your research question? Enter text in the space provided below. -->
+
+blah blah blah...
+
+Data:
+--------------------------------------------------------
+
+### Data source:
+<!-- Include the citation for your data, and (if available) link to the source. -->
+
+http://openintrostat.github.io/openintro/reference/ncbirths.html
+
+### Data collection:
+<!-- How was the data collected? -->
+
+The state of North Carolina released a large data set containing information on births recorded in this state, and this dataset contains 1,000 samples from it.
+
+### Cases:
+<!--What are the cases (units of observation or experiment)? -->
+
+The cases are the records of 1,000 births.
+
+### Variables:
+<!--What are the one or two variables you will be studying? What types of variables are these? -->
+
+We are interested in the weight of babies and the amount of weeks pregnent. We are also interested in if other variables, like smoking habits and mother's age, have an effect on the baby's birth weight.
+
+### Type of study:
+<!--Observational study or experiment? Explain. -->
+
+This is an observational study because there was no random assignment/treatment groups. These 1,000 observations are pulled from North Carolina birth records.
+
+### Scope of inference:
+<!-- Can these data be used to establish causal links and/or can findings be generalized to the population at large? -->
+
+This data can be generalize to the general population because it uses random sampling methods; however, it is not an experiment so the data cannot be used to establish a causal link.
+
+### Load data:
+<!-- Simply enter the code required to load your data in the space below. No text required. -->
+
+```{r}
+data(ncbirths)
+```
+
+### Data clean-up:
+<!-- (Optional) If you had to do any data clean up in R, you can include the code and a very brief description of your steps here. If not, you can just get rid of this section. -->
+
+blah blah blah...
+
+```{r}
+#dropped NA values for smoking
+births_cleaned <- ncbirths %>%
+  filter(habit != "NA")
+```
+
+Exploratory data analysis:
+--------------------------------------------------------
+<!-- Perform relevant descriptive statistics, including summary statistics and visualization of the data. Each plot or summary table should be accompanied by text describing what you see. Also address what the exploratory data analysis suggests about your research question. -->
+
+
+```{r}
+# smoking vs. baby weight
+ggplot(data = births_cleaned, aes(y = weight, x =  habit)) + geom_boxplot()
+
+#include data print out below 
+```
+
+
+
+
+
+Data:
+--------------------------------------------------------
+A one page print out of our data is submitted separately.
+
+<!-- Do not forget to print out a page of your data and turn it in with your proposal-->
+```{r}
+births_cleaned
+```
