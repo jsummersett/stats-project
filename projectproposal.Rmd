@@ -43,7 +43,7 @@ http://openintrostat.github.io/openintro/reference/ncbirths.html
 ### Data collection:
 <!-- How was the data collected? -->
 
-The state of North Carolina released a large data set containing information on births recorded in this state, and this dataset contains 1,000 samples from it.
+The state of North Carolina released a large data set containing information on births recorded within the state. The NCBIRTHS dataset contains 1,000 samples from it.
 
 ### Cases:
 <!--What are the cases (units of observation or experiment)? -->
