@@ -4,7 +4,7 @@ output:
   html_document: default
 ---
 <!-- Replace below with the title of your project -->
-PROJECT TITLE
+Baby Weight Analysis
 ========================================================
 
 
@@ -30,7 +30,7 @@ Research question:
 --------------------------------------------------------
 <!-- In one sentence, what is your research question? Enter text in the space provided below. -->
 
-blah blah blah...
+Does the mother's smoking habits have an effect on the baby's birth weight?
 
 Data:
 --------------------------------------------------------
